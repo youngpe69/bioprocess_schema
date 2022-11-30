@@ -1,0 +1,63 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://github.com/youngpe69/bioprocess_schema/bioprocess.schema.json",
+   	"title": "Bio-Processing Control Quality Attributes",
+    "description":"JSON Schema for Bio-Processing Control Quality Attributes",
+    "type": "object",
+	"properties": {
+		"bioReactorVessel": {
+			"description": "Identifier of the vessel from which the sample was extracted",
+			"type": "string"
+		},
+		"collectionTimestamp": {
+			"description": "Time at which the sample was extracted from the bioreactor",
+			"type": "string",
+			"format": "date-time"
+		},
+		"cqaName": {
+			"description": "Name of the CQA that is being analysed",
+			"type": "string"
+		},
+		"cqaValue": {
+			"description": "Value obtained for CQA at point of measurement",
+			"type": "number"
+		},
+		"cqaUnits": {
+			"description": "Measurement units of the CQA at point of measurement",
+			"type": "string"
+		},
+		"cqaQCCheck": {
+			"description": "The value obtained has passed QC checks",
+			"type": "boolean"
+		},
+		"cqaSampleID": {
+			"description": "An identifier associated with a sample that may have been processed from the extracted bioreactor sample",
+			"type": "string"
+		},
+		"cqaAnalyticalMethodID": {
+			"description": "An identifier associated with the analytical method used to obtain a value for the CQA",
+			"type": "string"
+		},
+		"cqaSamplePreparationMethodID": {
+			"description": "An identifier associated with the sample preparation method used to obtain subsamples for subsequent CQA analysis",
+			"type:": "string"
+		},
+		"analysisSystem": {
+			"description": "The analysis system used to determine the CQA",
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "Name of the analysis system used to determine CQA",
+					"type": "string"
+				},
+				"id": {
+					"description": "An identifier associated with the analysis sytem",
+					"type": "string"
+				}
+			}
+			
+		}
+		
+	},
+	"required": [ "bioReactorVessel", "collectionTimestamp", "cqaName", "cqaValue", "cqaUnits", "cqaQCCheck" ]
+}
