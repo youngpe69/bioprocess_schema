@@ -1,9 +1,9 @@
 {
-	"$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "https://github.com/youngpe69/bioprocess_schema/bioprocess.schema.json",
-   	"title": "Bio-Processing Control Quality Attributes",
-    "description":"JSON Schema for Bio-Processing Control Quality Attributes",
-    "type": "object",
+   "$schema": "https://json-schema.org/draft/2019-09/schema",
+   "$id": "https://github.com/youngpe69/bioprocess_schema/bioprocess.schema.json",
+   "title": "Bio-Processing Control Quality Attributes",
+   "description":"JSON Schema for Bio-Processing Control Quality Attributes",
+   "type": "object",
 	"properties": {
 		"bioReactorVessel": {
 			"description": "Identifier of the vessel from which the sample was extracted",
